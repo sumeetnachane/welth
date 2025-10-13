@@ -1,5 +1,6 @@
 // import { seedTransactions } from "@/actions/seed";
 
+export const runtime = "nodejs"; // ensure it's not edge
 export async function GET() {
   const { seedTransactions } = await import("@/actions/seed"); // dynamic import
   const result = await seedTransactions();
