@@ -1,3 +1,5 @@
+export const runtime = "nodejs"; // ensures it's a normal serverless function
+
 import arcjet, { createMiddleware, detectBot, shield } from "@arcjet/next";
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
