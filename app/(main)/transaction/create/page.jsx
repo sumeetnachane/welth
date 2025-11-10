@@ -5,8 +5,9 @@ import AddTransactionForm from "../_components/transaction-form";
 import { getTransaction } from "@/actions/transaction";
 
 const AddTransactionPage = async ({ searchParams }) => {
+  const params = await searchParams; // ✅ fix for Next.js 15+
   const accounts = await getUserAccounts();
-  const editId = searchParams?.edit;
+  const editId = params?.edit;
 
   let initialData = null;
   if (editId) {
